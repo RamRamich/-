@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Будущие миссии - Исследование космоса</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="astronomy.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="icon" href="icon.png">
+</head>
+
+<body>
+    <!-- Астрономический фон -->
+    <div class="cosmic-background">
+        <div class="stars"></div>
+        <div class="orbit orbit-1"></div>
+        <div class="planet planet-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="planet planet-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="planet planet-3"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+        <div class="nebula nebula-4"></div>
+        <div class="nebula nebula-5"></div>
+        <div class="nebula nebula-6"></div>
+        <div class="nebula nebula-7"></div>
+        <div class="nebula nebula-8"></div>
+    </div>
+
+    <div class="content-overlay">
+        <header>
+    <nav>
+        <a href="index.html"><img src="icon.png" alt="Логотип" class="logo"></a>
+
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-btn" id="themeToggle">Светлая тема</button>
+        </div>
+
+        <!-- Десктопное меню -->
+        <div class="desktop-nav">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="1.html">ПЛАНЕТОХОДЫ</a>
+            <a href="2.html">ЗЕМНЫЕ ТЕЛЕСКОПЫ</a>
+            <a href="3.html">КОСМИЧЕСКИЕ АППАРАТЫ</a>
+            <a href="4.html">ИСТОРИЯ КОСМОНАВТИКИ</a>
+            <a href="5.html">БУДУЩИЕ МИССИИ</a>
+        </div>
+
+        <!-- Бургер-меню -->
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-nav">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="1.html">ПЛАНЕТОХОДЫ</a>
+            <a href="2.html">ЗЕМНЫЕ ТЕЛЕСКОПЫ</a>
+            <a href="3.html">КОСМИЧЕСКИЕ АППАРАТЫ</a>
+            <a href="4.html">ИСТОРИЯ КОСМОНАВТИКИ</a>
+            <a href="5.html">БУДУЩИЕ МИССИИ</a>
+        </div>
+    </nav>
+</header>
+
+        <main>
+            <!-- Заголовок страницы -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>БУДУЩИЕ КОСМИЧЕСКИЕ МИССИИ</h1>
+                    <p class="page-subtitle">Следующий рубеж: от возвращения на Луну до полётов к другим звёздам</p>
+                </div>
+            </section>
+
+            <!-- Лунные программы -->
+            <section class="container">
+                <div class="card">
+                    <h2>ЛУННЫЕ ПРОГРАММЫ</h2>
+                    
+                    <div class="mission-grid">
+                        <div class="mission-card">
+                            <div class="mission-badge">NASA</div>
+                            <h3>Artemis</h3>
+                            <div class="mission-date">2025-2030</div>
+                            <p>Программа возвращения человека на Луну, включающая создание лунной орбитальной станции Gateway и постоянной базы на поверхности</p>
+                            <div class="mission-goals">
+                                <span class="goal-tag">Первая женщина на Луне</span>
+                                <span class="goal-tag">Устойчивое присутствие</span>
+                                <span class="goal-tag">Подготовка к Марсу</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mission-card">
+                            <div class="mission-badge">Роскосмос/CNSA</div>
+                            <h3>Международная лунная станция</h3>
+                            <div class="mission-date">2026-2035</div>
+                            <p>Совместный российско-китайский проект по созданию научной базы на южном полюсе Луны</p>
+                            <div class="mission-goals">
+                                <span class="goal-tag">Научные исследования</span>
+                                <span class="goal-tag">Тестирование технологий</span>
+                                <span class="goal-tag">Автоматические миссии</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Марсианские миссии -->
+            <section class="container">
+                <div class="card">
+                    <h2>МАРСИАНСКИЕ ЭКСПЕДИЦИИ</h2>
+                    
+                    <div class="mission-timeline">
+                        <div class="mission-phase">
+                            <div class="phase-year">2024-2030</div>
+                            <h3>Подготовительный этап</h3>
+                            <ul>
+                                <li>Mars Sample Return - доставка образцов грунта с Марса</li>
+                                <li>Изучение радиационной обстановки</li>
+                                <li>Тестирование систем жизнеобеспечения на МКС и Луне</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mission-phase">
+                            <div class="phase-year">2030-2040</div>
+                            <h3>Пилотируемые полёты</h3>
+                            <ul>
+                                <li>Первые облётные миссии без посадки</li>
+                                <li>Создание марсианской орбитальной станции</li>
+                                <li>Подготовка инфраструктуры на поверхности</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mission-phase">
+                            <div class="phase-year">После 2040</div>
+                            <h3>Создание поселений</h3>
+                            <ul>
+                                <li>Первые долговременные базы на Марсе</li>
+                                <li>Производство ресурсов на месте</li>
+                                <li>Формирование самоподдерживающейся колонии</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Новые телескопы -->
+            <section class="container">
+                <div class="card">
+                    <h2>БУДУЩИЕ КОСМИЧЕСКИЕ ТЕЛЕСКОПЫ</h2>
+                    
+                    <div class="telescope-comparison">
+                        <div class="telescope-card">
+                            <h3>Nancy Grace Roman</h3>
+                            <div class="telescope-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Запуск:</span>
+                                    <span class="spec-value">2027</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Область:</span>
+                                    <span class="spec-value">Инфракрасный</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Задачи:</span>
+                                    <span class="spec-value">Тёмная энергия, экзопланеты</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="telescope-card featured">
+                            <h3>LUVOIR</h3>
+                            <div class="telescope-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Запуск:</span>
+                                    <span class="spec-value">2039</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Область:</span>
+                                    <span class="spec-value">Ультрафиолет-инфракрасный</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Задачи:</span>
+                                    <span class="spec-value">Поиск жизни, формирование галактик</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="telescope-card">
+                            <h3>ATHENA</h3>
+                            <div class="telescope-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Запуск:</span>
+                                    <span class="spec-value">2035</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Область:</span>
+                                    <span class="spec-value">Рентгеновский</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Задачи:</span>
+                                    <span class="spec-value">Чёрные дыры, скопления галактик</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Прорывные технологии -->
+            <section class="container">
+                <div class="card">
+                    <h2>ПРОРЫВНЫЕ ТЕХНОЛОГИИ</h2>
+                    
+                    <div class="tech-roadmap">
+                        <div class="roadmap-item">
+                            <div class="roadmap-period">2025-2035</div>
+                            <div class="roadmap-content">
+                                <h3>Ядерные двигательные установки</h3>
+                                <p>Термоядерные и ядерно-электрические двигатели сократят время полёта к Марсу с 9 до 3 месяцев</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-period">2030-2040</div>
+                            <div class="roadmap-content">
+                                <h3>Искусственная гравитация</h3>
+                                <p>Создание вращающихся модулей для долговременных миссий и орбитальных станций</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-period">2040-2050</div>
+                            <div class="roadmap-content">
+                                <h3>Межзвёздные зонды</h3>
+                                <p>Разработка технологий для отправки автоматических станций к ближайшим звёздным системам</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Частные инициативы -->
+            <section class="container">
+                <div class="card">
+                    <h2>ЧАСТНЫЕ КОСМИЧЕСКИЕ ИНИЦИАТИВЫ</h2>
+                    
+                    <div class="initiative-cards">
+                        <div class="initiative-card">
+                            <h3>SpaceX - Starship</h3>
+                            <p>Полностью многоразовая система для полётов на Луну, Марс и beyond</p>
+                            <div class="milestones">
+                                <div class="milestone achieved">Первый орбитальный полёт</div>
+                                <div class="milestone current">Лунные миссии</div>
+                                <div class="milestone future">Марсианская колония</div>
+                            </div>
+                        </div>
+                        
+                        <div class="initiative-card">
+                            <h3>Blue Origin - Blue Moon</h3>
+                            <p>Посадочный модуль для доставки грузов и экипажа на Луну</p>
+                            <div class="milestones">
+                                <div class="milestone achieved">Суборбитальные полёты</div>
+                                <div class="milestone current">Орбитальные испытания</div>
+                                <div class="milestone future">Лунная база</div>
+                            </div>
+                        </div>
+                        
+                        <div class="initiative-card">
+                            <h3>Project Starshot</h3>
+                            <p>Инициатива по отправке наноспутников к Альфе Центавра</p>
+                            <div class="milestones">
+                                <div class="milestone current">Исследования</div>
+                                <div class="milestone future">Прототипы</div>
+                                <div class="milestone distant">Межзвёздный полёт</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    <!-- Подключаем скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>

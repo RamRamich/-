@@ -1,0 +1,267 @@
+/* Астрономические эффекты: звёзды, планеты, туманности */
+/* Астрономические эффекты: звёзды, планеты, туманности */
+.cosmic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(135deg, var(--cosmic-bg-start) 0%, var(--cosmic-bg-end) 100%);
+}
+
+/* Звёзды */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 40px 70px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 90px 40px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 130px 80px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 160px 30px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 200px 60px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 240px 90px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 280px 20px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 320px 70px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 360px 40px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 400px 80px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 440px 30px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 480px 60px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 520px 90px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 560px 20px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 600px 70px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 640px 40px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 680px 80px, var(--star-color), transparent),
+        radial-gradient(2px 2px at 720px 30px, var(--star-color), transparent),
+        radial-gradient(1px 1px at 760px 60px, var(--star-color), transparent);
+    background-repeat: repeat;
+    background-size: 800px 800px;
+    animation: starTwinkle 8s infinite;
+}
+
+/* Планеты */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(0.5px);
+    transition: transform 0.5s ease;
+    background: radial-gradient(circle at 30% 30%, var(--planet-color), transparent 70%);
+    box-shadow: 0 0 40px var(--planet-color);
+}
+
+/* Орбиты */
+.orbit {
+    position: absolute;
+    border: 1px solid var(--orbit-color);
+    border-radius: 50%;
+    animation: orbitRotate linear infinite;
+}
+
+/* Многоцветные светящиеся облака (туманности) */
+.nebula {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: var(--nebula-opacity);
+    mix-blend-mode: screen;
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+.planet-1 {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+    left: 10%;
+    background: radial-gradient(circle at 30% 30%, var(--planet-color), transparent 70%);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+    animation: planetOrbit 60s linear infinite;
+}
+
+.planet-2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    right: 15%;
+    background: radial-gradient(circle at 40% 40%, var(--planet-color), transparent 70%);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    animation: planetOrbit 40s linear infinite reverse;
+}
+
+.planet-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 20%;
+    background: radial-gradient(circle at 50% 50%, var(--planet-color), transparent 70%);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    animation: planetOrbit 30s linear infinite;
+}
+
+@keyframes planetOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/* Орбиты */
+
+.orbit-1 {
+    width: 300px;
+    height: 300px;
+    top: calc(15% - 150px);
+    left: calc(10% - 150px);
+    animation-duration: 60s;
+}
+
+.orbit-2 {
+    width: 200px;
+    height: 200px;
+    top: calc(60% - 100px);
+    right: calc(15% - 100px);
+    animation-duration: 40s;
+    animation-direction: reverse;
+}
+
+.orbit-3 {
+    width: 150px;
+    height: 150px;
+    bottom: calc(20% - 75px);
+    left: calc(20% - 75px);
+    animation-duration: 30s;
+}
+
+@keyframes orbitRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Многоцветные светящиеся облака (туманности) */
+
+/* Бирюзово-голубое облако */
+.nebula-1 {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    right: 10%;
+    background: radial-gradient(circle, #2a9d8f, #48cae4, #90e0ef, transparent 70%);
+    animation: nebulaFloat 25s ease-in-out infinite;
+}
+
+/* Пурпурно-розовое облако */
+.nebula-2 {
+    width: 350px;
+    height: 350px;
+    bottom: 15%;
+    left: 5%;
+    background: radial-gradient(circle, #9d4edd, #ff6b6b, #ff9e00, transparent 70%);
+    animation: nebulaFloat 30s ease-in-out infinite reverse;
+}
+
+/* Золотисто-оранжевое облако */
+.nebula-3 {
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #ff9e00, #ff6b6b, #e63946, transparent 70%);
+    animation: nebulaFloat 35s ease-in-out infinite;
+}
+
+/* Сине-фиолетовое облако */
+.nebula-4 {
+    width: 300px;
+    height: 300px;
+    top: 70%;
+    right: 5%;
+    background: radial-gradient(circle, #4361ee, #7209b7, #3a0ca3, transparent 70%);
+    animation: nebulaFloat 20s ease-in-out infinite;
+}
+
+/* Зеленовато-голубое облако */
+.nebula-5 {
+    width: 450px;
+    height: 450px;
+    top: 20%;
+    left: 5%;
+    background: radial-gradient(circle, #06d6a0, #118ab2, #073b4c, transparent 70%);
+    animation: nebulaFloat 28s ease-in-out infinite reverse;
+}
+
+/* Желто-зелёное облако */
+.nebula-6 {
+    width: 380px;
+    height: 380px;
+    top: 80%;
+    left: 20%;
+    background: radial-gradient(circle, #ffd166, #06d6a0, #118ab2, transparent 70%);
+    animation: nebulaFloat 32s ease-in-out infinite;
+}
+
+/* Красно-оранжевое облако */
+.nebula-7 {
+    width: 320px;
+    height: 320px;
+    top: 30%;
+    right: 20%;
+    background: radial-gradient(circle, #e63946, #ff6b6b, #ff9e00, transparent 70%);
+    animation: nebulaFloat 26s ease-in-out infinite reverse;
+}
+
+/* Фиолетово-синее облако */
+.nebula-8 {
+    width: 420px;
+    height: 420px;
+    bottom: 10%;
+    right: 15%;
+    background: radial-gradient(circle, #7209b7, #4361ee, #3a0ca3, transparent 70%);
+    animation: nebulaFloat 34s ease-in-out infinite;
+}
+
+@keyframes nebulaFloat {
+    0%, 100% { 
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.08;
+    }
+    25% { 
+        transform: translate(15px, -10px) scale(1.05) rotate(5deg);
+        opacity: 0.12;
+    }
+    50% { 
+        transform: translate(-10px, 8px) scale(0.98) rotate(-3deg);
+        opacity: 0.06;
+    }
+    75% { 
+        transform: translate(-12px, -8px) scale(1.02) rotate(2deg);
+        opacity: 0.1;
+    }
+}
+
+/* Адаптивность для астрономических эффектов */
+@media (max-width: 768px) {
+    .planet-1, .planet-2, .planet-3 {
+        display: none;
+    }
+    
+    .orbit-1, .orbit-2, .orbit-3 {
+        display: none;
+    }
+    
+    .nebula {
+        opacity: 0.05;
+    }
+    
+    .nebula-1, .nebula-2, .nebula-3, .nebula-4, 
+    .nebula-5, .nebula-6, .nebula-7, .nebula-8 {
+        width: 200px;
+        height: 200px;
+    }
+}

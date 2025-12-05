@@ -1,0 +1,218 @@
+/* Макет и структура страницы */
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка и навигация */
+header {
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+[data-theme="light"] .logo {
+    filter: brightness(0) invert(0.3);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Десктопное меню */
+.desktop-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.desktop-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.desktop-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    transition: left 0.5s;
+}
+
+.desktop-nav a:hover::before {
+    left: 100%;
+}
+
+.desktop-nav a:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Бургер-меню */
+#burger-toggle {
+    display: none;
+}
+
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.burger-icon span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--header-bg);
+    backdrop-filter: blur(15px);
+}
+
+/* Основной контент - увеличенный отступ */
+main {
+    padding-top: 120px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    
+    .burger-icon {
+        display: flex;
+    }
+    
+    #burger-toggle:checked ~ .mobile-nav {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mobile-nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid var(--border-color);
+        transition: background 0.3s ease;
+    }
+    
+    .mobile-nav a:hover {
+        background: var(--accent-color);
+        color: #1a1a1a;
+    }
+    
+    nav {
+        padding: 1rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    main {
+        padding-top: 100px;
+    }
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 1.5rem; /* Уменьшили расстояние между пунктами */
+    flex-wrap: nowrap;
+}
+
+.desktop-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem; /* Уменьшили padding */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap; /* Запрещаем перенос текста */
+    font-size: 0.95rem; /* Немного уменьшили размер шрифта */
+}
+
+/* Убедимся, что навигация не выходит за пределы */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 1024px) {
+    .desktop-nav {
+        gap: 1rem;
+    }
+    
+    .desktop-nav a {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .desktop-nav {
+        display: none; /* Раньше скрываем на средних экранах */
+    }
+    
+    .burger-icon {
+        display: flex;
+    }
+}

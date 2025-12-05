@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планетоходы - Исследование космоса</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="astronomy.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="icon" href="icon.png">
+</head>
+
+<body>
+    <!-- Астрономический фон -->
+    <div class="cosmic-background">
+        <div class="stars"></div>
+        <div class="orbit orbit-1"></div>
+        <div class="planet planet-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="planet planet-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="planet planet-3"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+        <div class="nebula nebula-4"></div>
+        <div class="nebula nebula-5"></div>
+        <div class="nebula nebula-6"></div>
+        <div class="nebula nebula-7"></div>
+        <div class="nebula nebula-8"></div>
+    </div>
+
+    <div class="content-overlay">
+    <header>
+        <nav>
+            <a href="index.html"><img src="icon.png" alt="Логотип" class="logo"></a>
+
+            <!-- Переключатель темы -->
+            <div class="theme-switcher">
+                <button class="theme-btn" id="themeToggle">Светлая тема</button>
+            </div>
+
+            <!-- Десктопное меню -->
+            <div class="desktop-nav">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="1.html">ПЛАНЕТОХОДЫ</a>
+                <a href="2.html">ЗЕМНЫЕ ТЕЛЕСКОПЫ</a>
+                <a href="3.html">КОСМИЧЕСКИЕ АППАРАТЫ</a>
+                <a href="4.html">ИСТОРИЯ КОСМОНАВТИКИ</a>
+                <a href="5.html">БУДУЩИЕ МИССИИ</a>
+            </div>
+
+            <!-- Бургер-меню -->
+            <input type="checkbox" id="burger-toggle">
+            <label for="burger-toggle" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Мобильное меню -->
+            <div class="mobile-nav">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="1.html">ПЛАНЕТОХОДЫ</a>
+                <a href="2.html">ЗЕМНЫЕ ТЕЛЕСКОПЫ</a>
+                <a href="3.html">КОСМИЧЕСКИЕ АППАРАТЫ</a>
+                <a href="4.html">ИСТОРИЯ КОСМОНАВТИКИ</a>
+                <a href="5.html">БУДУЩИЕ МИССИИ</a>
+            </div>
+        </nav>
+    </header>
+
+        <main>
+            <!-- Заголовок страницы -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>ПЛАНЕТОХОДЫ</h1>
+                    <p class="page-subtitle">Автоматические исследователи поверхности других миров</p>
+                </div>
+            </section>
+
+            <!-- Введение -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>ЧТО ТАКОЕ ПЛАНЕТОХОДЫ?</h2>
+                    <div class="content-grid">
+                        <div class="text-content">
+                            <p>Планетоходы — это автоматические мобильные лаборатории, предназначенные для исследования поверхности других планет, спутников и астероидов. Они оснащены научными приборами, камерами и системами связи для передачи данных на Землю.</p>
+                            
+                            <p>Основные задачи планетоходов:</p>
+                            <ul>
+                                <li>Исследование геологии и состава поверхности</li>
+                                <li>Поиск следов воды и органических соединений</li>
+                                <li>Изучение атмосферы и климатических условий</li>
+                                <li>Подготовка к будущим пилотируемым миссиям</li>
+                                <li>Поиск признаков жизни</li>
+                            </ul>
+                        </div>
+                        <div class="image-content">
+                            <div class="placeholder-image" style="background: #2c3e50; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                                <span style="color: #fff;">Изображение планетохода</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Марсианские роверы -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>МАРСИАНСКИЕ РОВЕРЫ NASA</h2>
+                    
+                    <div class="rover-comparison">
+                        <div class="rover-card">
+                            <h3>Sojourner</h3>
+                            <div class="rover-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Миссия:</span>
+                                    <span class="spec-value">Mars Pathfinder (1997)</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Масса:</span>
+                                    <span class="spec-value">10.6 кг</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Длительность:</span>
+                                    <span class="spec-value">83 дня</span>
+                                </div>
+                            </div>
+                            <p>Первый успешный марсоход. Доказал возможность работы мобильных аппаратов на Марсе.</p>
+                        </div>
+                        
+                        <div class="rover-card featured">
+                            <h3>Spirit & Opportunity</h3>
+                            <div class="rover-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Миссия:</span>
+                                    <span class="spec-value">Mars Exploration Rover (2004)</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Масса:</span>
+                                    <span class="spec-value">185 кг</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Длительность:</span>
+                                    <span class="spec-value">6+ лет (Opportunity)</span>
+                                </div>
+                            </div>
+                            <p>Близнецы, доказавшие существование водной среды в прошлом Марса.</p>
+                        </div>
+                        
+                        <div class="rover-card">
+                            <h3>Curiosity</h3>
+                            <div class="rover-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Миссия:</span>
+                                    <span class="spec-value">Mars Science Laboratory (2012)</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Масса:</span>
+                                    <span class="spec-value">899 кг</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Статус:</span>
+                                    <span class="spec-value">Активен</span>
+                                </div>
+                            </div>
+                            <p>Самый большой марсоход. Ищет условия, благоприятные для микробной жизни.</p>
+                        </div>
+                        
+                        <div class="rover-card">
+                            <h3>Perseverance</h3>
+                            <div class="rover-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Миссия:</span>
+                                    <span class="spec-value">Mars 2020 (2021)</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Масса:</span>
+                                    <span class="spec-value">1025 кг</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Статус:</span>
+                                    <span class="spec-value">Активен</span>
+                                </div>
+                            </div>
+                            <p>Собирает образцы для будущей доставки на Землю. Имеет вертолёт-компаньон Ingenuity.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Технологии планетоходов -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>ТЕХНОЛОГИИ ПЛАНЕТОХОДОВ</h2>
+                    
+                    <div class="tech-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Энергоснабжение</h3>
+                            <p>Радиоизотопные термоэлектрические генераторы (RTG) и солнечные панели обеспечивают энергией научные приборы и системы движения.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🧭</div>
+                            <h3>Навигация</h3>
+                            <p>Автономные системы навигации, стереокамеры и лидары позволяют планетоходам безопасно перемещаться по сложному рельефу.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🔬</div>
+                            <h3>Научные приборы</h3>
+                            <p>Камеры высокого разрешения, спектрометры, рентгеновские анализаторы и буровые установки для изучения состава грунта.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">📡</div>
+                            <h3>Связь</h3>
+                            <p>Прямая связь с Землей и ретрансляция через орбитальные аппараты для передачи научных данных и получения команд.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Будущие миссии -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>БУДУЩИЕ МИССИИ ПЛАНЕТОХОДОВ</h2>
+                    
+                    <div class="future-missions">
+                        <div class="mission-timeline">
+                            <div class="mission-phase">
+                                <div class="phase-year">2026</div>
+                                <h3>ExoMars Rosalind Franklin</h3>
+                                <p>Европейский марсоход с буровой установкой для поиска следов жизни на глубине до 2 метров.</p>
+                            </div>
+                            
+                            <div class="mission-phase">
+                                <div class="phase-year">2028</div>
+                                <h3>Mars Sample Return</h3>
+                                <p>Совместная миссия NASA и ESA по доставке образцов, собранных Perseverance, на Землю.</p>
+                            </div>
+                            
+                            <div class="mission-phase">
+                                <div class="phase-year">2030+</div>
+                                <h3>Лунные роверы</h3>
+                                <p>Планируются роверы для исследования полярных регионов Луны в поисках водяного льда.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <!-- Подключаем скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>

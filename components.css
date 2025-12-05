@@ -1,0 +1,751 @@
+/* Компоненты: карточки, кнопки, формы */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: var(--accent-color);
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
+}
+
+/* Кнопки */
+.form-submit, .fm-btn {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-submit::before, .fm-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.form-submit:hover::before, .fm-btn:hover::before {
+    left: 100%;
+}
+
+.form-submit:hover, .fm-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.fm-btn.danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp { animation: fadeInUp 0.6s ease; }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .card {
+        padding: 1rem;
+    }
+}
+/* Новые компоненты для улучшенного дизайна */
+
+/* Герой-секция */
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent-color), #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Быстрая навигация */
+.quick-nav {
+    padding: 3rem 0;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.nav-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Сетка контента */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.text-content ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.text-content li {
+    margin-bottom: 0.5rem;
+}
+
+.content-image {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Временная шкала */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-year {
+    background: var(--accent-color);
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    width: 45%;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: 100%;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: 100%;
+}
+
+/* Технологическая сетка */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.tech-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Новостная секция */
+.news-section {
+    background: var(--card-bg);
+    padding: 3rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.news-card {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.news-date {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .timeline-year {
+        margin-bottom: 1rem;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+    
+    .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+    }
+}
+/* Специфические стили для страниц */
+
+/* Заголовок страницы */
+.page-header {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent-color), #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Сетка контента */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.text-content ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.text-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.placeholder-image {
+    background: var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-style: italic;
+}
+
+/* Сравнение роверов */
+.rover-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.rover-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.rover-card.featured {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+}
+
+.rover-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.rover-specs {
+    margin: 1rem 0;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.spec-label {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.spec-value {
+    text-align: right;
+}
+
+/* Технологические особенности */
+.tech-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Будущие миссии */
+.future-missions {
+    margin-top: 2rem;
+}
+
+.mission-phase {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mission-phase:last-child {
+    border-bottom: none;
+}
+
+.phase-year {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Телескопы */
+.telescope-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.telescope-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.telescope-card.featured {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.telescope-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+/* Радиотелескопы */
+.radio-telescopes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.radio-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.radio-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
+/* Будущие телескопы */
+.future-telescopes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.future-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.future-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
+.future-specs {
+    margin: 1rem 0;
+}
+
+/* Временная шкала миссий */
+.mission-timeline-vertical {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+
+.mission-timeline-vertical::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-color);
+}
+
+.mission-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.mission-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-color);
+}
+
+.mission-year {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.mission-content {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+
+
+.mission-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.mission-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.mission-specs {
+    margin: 1rem 0;
+}
+
+/* Технологическая сетка */
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rover-card.featured,
+    .telescope-card.featured {
+        transform: none;
+    }
+    
+    .mission-timeline-vertical {
+        padding-left: 1.5rem;
+    }
+    
+    .mission-item {
+        padding-left: 1.5rem;
+    }
+}

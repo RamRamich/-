@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Земные телескопы - Исследование космоса</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="astronomy.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="icon" href="icon.png">
+</head>
+
+<body>
+    <!-- Астрономический фон -->
+    <div class="cosmic-background">
+        <div class="stars"></div>
+        <div class="orbit orbit-1"></div>
+        <div class="planet planet-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="planet planet-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="planet planet-3"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+        <div class="nebula nebula-4"></div>
+        <div class="nebula nebula-5"></div>
+        <div class="nebula nebula-6"></div>
+        <div class="nebula nebula-7"></div>
+        <div class="nebula nebula-8"></div>
+    </div>
+
+    <div class="content-overlay">
+        <header>
+    <nav>
+        <a href="index.html"><img src="icon.png" alt="Логотип" class="logo"></a>
+
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-btn" id="themeToggle">Светлая тема</button>
+        </div>
+
+        <!-- Десктопное меню -->
+        <div class="desktop-nav">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="1.html">ПЛАНЕТОХОДЫ</a>
+            <a href="2.html">ЗЕМНЫЕ ТЕЛЕСКОПЫ</a>
+            <a href="3.html">КОСМИЧЕСКИЕ АППАРАТЫ</a>
+            <a href="4.html">ИСТОРИЯ КОСМОНАВТИКИ</a>
+            <a href="5.html">БУДУЩИЕ МИССИИ</a>
+        </div>
+
+        <!-- Бургер-меню -->
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-nav">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="1.html">ПЛАНЕТОХОДЫ</a>
+            <a href="2.html">ЗЕМНЫЕ ТЕЛЕСКОПЫ</a>
+            <a href="3.html">КОСМИЧЕСКИЕ АППАРАТЫ</a>
+            <a href="4.html">ИСТОРИЯ КОСМОНАВТИКИ</a>
+            <a href="5.html">БУДУЩИЕ МИССИИ</a>
+        </div>
+    </nav>
+</header>
+
+        <main>
+            <!-- Заголовок страницы -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>ЗЕМНЫЕ ТЕЛЕСКОПЫ</h1>
+                    <p class="page-subtitle">Мощнейшие инструменты для наблюдения Вселенной с поверхности Земли</p>
+                </div>
+            </section>
+
+            <!-- Введение -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>ОСНОВНЫЕ ТИПЫ ТЕЛЕСКОПОВ</h2>
+                    <div class="content-grid">
+                        <div class="text-content">
+                            <p>Наземные телескопы остаются важнейшим инструментом астрономических исследований, несмотря на развитие космических обсерваторий. Они позволяют проводить длительные наблюдения и имеют значительно большие aperture (апертуру) по сравнению с космическими телескопами.</p>
+                            
+                            <p>Основные типы телескопов:</p>
+                            <ul>
+                                <li><strong>Оптические телескопы</strong> - наблюдают в видимом свете</li>
+                                <li><strong>Радиотелескопы</strong> - изучают радиоизлучение небесных объектов</li>
+                                <li><strong>Инфракрасные телескопы</strong> - работают в инфракрасном диапазоне</li>
+                                <li><strong>Рентгеновские телескопы</strong> - исследуют высокоэнергетические процессы</li>
+                                <li><strong>Гамма-телескопы</strong> - регистрируют гамма-излучение</li>
+                            </ul>
+                        </div>
+                        <div class="image-content">
+                            <div class="placeholder-image" style="background: #2c3e50; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                                <span style="color: #fff;">Изображение телескопа</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Крупнейшие оптические телескопы -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>КРУПНЕЙШИЕ ОПТИЧЕСКИЕ ТЕЛЕСКОПЫ</h2>
+                    
+                    <div class="telescope-comparison">
+                        <div class="telescope-card">
+                            <h3>Gran Telescopio Canarias</h3>
+                            <div class="telescope-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">10.4 м</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Местоположение:</span>
+                                    <span class="spec-value">Канарские острова</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Год запуска:</span>
+                                    <span class="spec-value">2009</span>
+                                </div>
+                            </div>
+                            <p>Крупнейший оптический телескоп в мире с сегментированным зеркалом.</p>
+                        </div>
+                        
+                        <div class="telescope-card featured">
+                            <h3>Keck I и Keck II</h3>
+                            <div class="telescope-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">10 м каждый</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Местоположение:</span>
+                                    <span class="spec-value">Гавайи, Мауна-Кеа</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Год запуска:</span>
+                                    <span class="spec-value">1993, 1996</span>
+                                </div>
+                            </div>
+                            <p>Близнецы, которые могут работать вместе как интерферометр.</p>
+                        </div>
+                        
+                        <div class="telescope-card">
+                            <h3>Very Large Telescope</h3>
+                            <div class="telescope-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">8.2 м × 4</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Местоположение:</span>
+                                    <span class="spec-value">Чили, Атакама</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Год запуска:</span>
+                                    <span class="spec-value">1998-2000</span>
+                                </div>
+                            </div>
+                            <p>Система из четырёх телескопов, способных работать как интерферометр.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Радиотелескопы -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>РАДИОТЕЛЕСКОПЫ</h2>
+                    
+                    <div class="radio-telescopes">
+                        <div class="radio-card">
+                            <h3>FAST (Китай)</h3>
+                            <div class="radio-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">500 м</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Чувствительность:</span>
+                                    <span class="spec-value">Крупнейший в мире</span>
+                                </div>
+                            </div>
+                            <p>Крупнейший в мире радиотелескоп с заполненной апертурой.</p>
+                        </div>
+                        
+                        <div class="radio-card">
+                            <h3>Аресибо (Пуэрто-Рико)</h3>
+                            <div class="radio-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">305 м</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Статус:</span>
+                                    <span class="spec-value">Выведен из эксплуатации (2020)</span>
+                                </div>
+                            </div>
+                            <p>Легендарный телескоп, проработавший 57 лет. Обнаружил первые пульсары.</p>
+                        </div>
+                        
+                        <div class="radio-card">
+                            <h3>ALMA (Чили)</h3>
+                            <div class="radio-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Антенны:</span>
+                                    <span class="spec-value">66 антенн</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Тип:</span>
+                                    <span class="spec-value">Интерферометр</span>
+                                </div>
+                            </div>
+                            <p>Крупнейший астрономический проект в мире. Изучает холодную Вселенную.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Технологии будущего -->
+            <section class="container">
+                <div class="card fade-in">
+                    <h2>БУДУЩИЕ МЕГАТЕЛЕСКОПЫ</h2>
+                    
+                    <div class="future-telescopes">
+                        <div class="future-card">
+                            <h3>Extremely Large Telescope</h3>
+                            <div class="future-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">39 м</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Запуск:</span>
+                                    <span class="spec-value">2027 (план)</span>
+                                </div>
+                            </div>
+                            <p>Самый большой оптический телескоп в мире. Будет собирать в 15 раз больше света, чем крупнейшие современные телескопы.</p>
+                        </div>
+                        
+                        <div class="future-card">
+                            <h3>Thirty Meter Telescope</h3>
+                            <div class="future-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">30 м</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Запуск:</span>
+                                    <span class="spec-value">2027 (план)</span>
+                                </div>
+                            </div>
+                            <p>Международный проект с участием США, Канады, Японии, Китая и Индии.</p>
+                        </div>
+                        
+                        <div class="future-card">
+                            <h3>Giant Magellan Telescope</h3>
+                            <div class="future-specs">
+                                <div class="spec">
+                                    <span class="spec-label">Диаметр:</span>
+                                    <span class="spec-value">24.5 м</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Запуск:</span>
+                                    <span class="spec-value">2029 (план)</span>
+                                </div>
+                            </div>
+                            <p>Состоит из семи сегментов диаметром 8.4 м каждый. Будет иметь разрешение в 10 раз выше, чем у телескопа Хаббл.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    <!-- Подключаем скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
